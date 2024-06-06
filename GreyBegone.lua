@@ -1,5 +1,8 @@
 --[[ Definitions ]]
+GreyBegone = CreateFrame("Frame", "GreyBegone", WorldFrame);
+GreyBegone:SetFrameStrata("TOOLTIP"); -- When parented to WorldFrame, causes OnUpdate handler to run close to last
 
+-- Redefine `GetQuestDifficultyColor` to return `GetQuestDifficultyColor["standard"]` instead of `GetQuestDifficultyColor["trivial"]`
 function GetQuestDifficultyColor(level)
 	local levelDiff = level - UnitLevel("player");
 	local color;
@@ -15,3 +18,6 @@ function GetQuestDifficultyColor(level)
 		return QuestDifficultyColors["standard"];
 	end
 end
+
+-- Redefine `GetQuestDifficultyColor["trivial"]` in case someone uses `QuestDifficultyColors` directly
+QuestDifficultyColors["trivial"] = QuestDifficultyColors["standard"];
