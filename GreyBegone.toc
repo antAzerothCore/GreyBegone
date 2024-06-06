@@ -2,7 +2,7 @@
 ## X-Compatible-With: 40000
 ## Author: Aris Trapalis
 ## Title: GreyBegone
-## Version: 0.1.0
+## Version: 0.2.0
 ## Notes: Replaces grey difficulty colour with green
 ## OptionalDeps:
 ## RequiredDeps: 
@@ -10,3 +10,4 @@
 ## SavedVariables:
 
 GreyBegone.lua
+GreyBegoneNameplates.lua
